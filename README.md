@@ -12,8 +12,29 @@ Write a C program to print even numbers ranging from M to N (including M and N v
 7.	Continue the loop until you have iterated through all numbers from M to N.
 
 ## PROGRAM:
+```python
+#include <stdio.h>
+int main() {
+     int M, N, i;
+     printf("Enter the value of M: ");
+     scanf("%d", &M);
+     printf("Enter the value of N: ");
+     scanf("%d", &N);
+     printf("Even numbers from %d to %d are:\n", M, N);
+     for (i = M; i <= N; i++) {
+          if (i % 2 == 0) {
+          printf("%d ", i);
+        }
+    }
+return 0;
+}
+
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/e1bf218b-e5d0-4bce-8678-a0e22cf8881a)
+
+
 
 
 
@@ -45,9 +66,29 @@ Write a C program to print the given triangular pattern using loop.
 5.	Continue the loop until you have printed the entire triangular pattern.
 
 ## PROGRAM:
+```python
+#include <stdio.h>
+int main() {
+     int rows, i, j;
+     printf("Enter the number of rows: ");
+     scanf("%d", &rows);
+     for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i; j++) {
+          printf("* ");
+        }
+        printf("\n");
+   }
+return 0;
+}
+
+
+```
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/2ceb0eaf-66f1-40c1-9e7d-1a0cd8116e3e)
+
+
 
 
 
@@ -74,9 +115,33 @@ Write a C program to perform addition and subtraction of two numbers using funct
 4.	Call the addition and subtraction functions, passing the two numbers as arguments.
 
 ## PROGRAM:
+```python
+#include<stdio.h>
+int addition(int a,int b)
+{
+    return a+b;
+}
+int substraction(int a,int b)
+{
+    return a-b;
+}
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int result_addition=addition(a,b);
+    int result_substraction=substraction(a,b);
+    printf("Addition: %d\n",result_addition);
+    printf("Subtraction: %d",result_substraction);
+    
+}
+```
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/518e5ec8-cbcf-49a7-a9b0-9703a19fe230)
+
+
 
 
 
@@ -106,9 +171,30 @@ Write a c program to find the sum of odd digits using for loop
 6.	Print the sum of odd digits.
 
 ## PROGRAM:
+```python
+#include <stdio.h>
+int main() {
+      int num, sum = 0, digit;
+      printf("Enter a number: ");
+      scanf("%d", &num);
+      for (; num != 0; num /= 10) {
+         digit = num % 10;
+         if (digit % 2 != 0) {
+            sum += digit;
+        }
+     }
+printf("Sum of odd digits = %d\n", sum);
+return 0;
+}
+```
+
+
+
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/a0ee4825-bb89-4c52-9ec6-100cd4633ccb)
+
 
 
 
@@ -136,9 +222,27 @@ d.	After the loop, print the factorial value.
 5.	End
 
 ## PROGRAM:
-
+```python
+#include <stdio.h>
+void fact() {
+     int N, i;
+     unsigned long long fact = 1;
+     printf("Enter a number: ");
+     scanf("%d", &N);
+     for (i = 1; i <= N; i++) {
+         fact *= i;
+     }
+printf("Factorial of %d is %llu\n", N, fact);
+}
+int main() {
+       fact();
+       return 0;
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/0d0a46b3-7abe-40bb-9c0c-cfdd3da885d8)
+
 
 ## RESULT:
 The program correctly computes the factorial of a given number using a separate function and displays the result.
