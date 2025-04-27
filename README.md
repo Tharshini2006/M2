@@ -15,24 +15,24 @@ Write a C program to print even numbers ranging from M to N (including M and N v
 ```python
 #include <stdio.h>
 int main() {
-     int M, N, i;
-     printf("Enter the value of M: ");
-     scanf("%d", &M);
-     printf("Enter the value of N: ");
-     scanf("%d", &N);
-     printf("Even numbers from %d to %d are:\n", M, N);
-     for (i = M; i <= N; i++) {
-          if (i % 2 == 0) {
-          printf("%d ", i);
-        }
-    }
+    int M, N;
+    scanf("%d %d", &M, &N);
+    int start = (M > N) ? M : N;
+    int end = (M < N) ? M : N;
+    if (start % 2 != 0) {
+      start--;
+   }
+   for (int i = start; i >= end; i -= 2) {
+       printf("%d ", i);
+   }
 return 0;
 }
 
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/e1bf218b-e5d0-4bce-8678-a0e22cf8881a)
+![image](https://github.com/user-attachments/assets/f90ef664-ebc9-4114-97b2-9e5b91a69dbe)
+
 
 
 
@@ -67,18 +67,20 @@ Write a C program to print the given triangular pattern using loop.
 
 ## PROGRAM:
 ```python
-#include <stdio.h>
-int main() {
-     int rows, i, j;
-     printf("Enter the number of rows: ");
-     scanf("%d", &rows);
-     for (i = 1; i <= rows; i++) {
-        for (j = 1; j <= i; j++) {
-          printf("* ");
-        }
+#include<stdio.h>
+int main()
+{
+     int i,n,j;
+     scanf("%d",&n);
+     for(i=1;i<=n;i++)
+     {
+     for(j=1;j<=i;j++)
+     {
+        printf("%d ",j);
+     }
         printf("\n");
-   }
-return 0;
+    }
+    return 0;
 }
 
 
@@ -86,7 +88,8 @@ return 0;
 
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/2ceb0eaf-66f1-40c1-9e7d-1a0cd8116e3e)
+![image](https://github.com/user-attachments/assets/b33e7483-7955-482e-872f-ca9cbfb440b4)
+
 
 
 
@@ -139,7 +142,8 @@ int main()
 
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/518e5ec8-cbcf-49a7-a9b0-9703a19fe230)
+![image](https://github.com/user-attachments/assets/8fd8fe58-2b18-4267-b4ba-de17385b1bbb)
+
 
 
 
@@ -193,7 +197,9 @@ return 0;
 
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/a0ee4825-bb89-4c52-9ec6-100cd4633ccb)
+![image](https://github.com/user-attachments/assets/b3a9e99f-4fe5-4078-84b2-7b6efcdc79ae)
+
+
 
 
 
@@ -241,7 +247,8 @@ int main() {
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/0d0a46b3-7abe-40bb-9c0c-cfdd3da885d8)
+![image](https://github.com/user-attachments/assets/270b5cc4-a8eb-4354-9e2b-f4c2296d33be)
+
 
 
 ## RESULT:
